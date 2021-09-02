@@ -18,4 +18,4 @@ The control application can be seen in the following figure:
 
 And the fully deployed architecture can be seen in the following figure:
 
-![Screenshot](Arquitectura final.png)
+![Screenshot](Screenshot1.png)
