@@ -14,8 +14,8 @@ help of a VPS.
 
 The control application can be seen in the following figure:
 
-![Screenshot](Screenshot.png)
+![Screenshot](Screenshot.jpg)
 
 And the fully deployed architecture can be seen in the following figure:
 
-![Screenshot](Screenshot1.png)
+![Screenshot](Screenshot1.jpg)
