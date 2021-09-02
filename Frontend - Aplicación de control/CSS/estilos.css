@@ -1,0 +1,1205 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+
+    background-color:white;
+
+}
+
+header{ 
+
+    width: auto;
+    height: 60px;
+    background-color:#0390fc;
+    display: flex;
+}
+
+/* Alertas */
+
+.swal-modal{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* Logo Superior */
+
+.logo{
+
+    width: 50px;
+    margin-left: 10px;
+
+}
+
+.contenedor_logo{
+
+    display: flex;
+    align-items: center;
+}
+
+.contenedor_logo .titulo {
+    
+    margin-left: 10px;
+    font-family: "Helvetica";
+}
+
+/* Contenido */
+
+
+.contenido {
+    width: 80%;
+    margin: 10px auto;
+    display: grid;
+    height: 66.6vh;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr;
+    grid-template-areas:
+        "barra_video barra_movimiento"
+        "video botones_movimiento"
+        "video velocidad"
+        "video barra_brazo"
+        "video botones_brazo"
+        "video barra_sensores"
+        "video botones_sensores"
+        "video botones_sensores"
+        "video botones_sensores";
+    grid-gap: 0.2rem;
+}
+
+.barra_video{
+
+    display: flex;
+    margin: 1px;
+    background: #003d63;
+    grid-area: barra_video;
+    border: 2px solid;
+    border-color:#003d63;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.video{
+
+    background: rgb(0, 0, 0);
+    grid-area: video;
+    border: 2px solid;
+    border-color:#003d63;
+    border-radius: 10px;
+}
+
+.video .imagen {
+
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Movimiento */
+
+.barra_movimiento{
+
+    display: flex;
+    margin: 1px;
+    background: #003d63;
+    grid-area: barra_movimiento;
+    border: 2px solid;
+    border-color:#003d63;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.botones_movimiento{
+
+    margin: 4px;
+    grid-area: botones_movimiento;
+    border: 2px solid;
+    border-color:#003d63;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+     "vacio frente vacio1"
+     "izquierda atras derecha";
+
+}
+
+
+.botones_movimiento .vacio{
+    
+    grid-area: vacio;
+
+}
+
+.botones_movimiento .vacio1{
+
+    grid-area: vacio1;
+
+}
+
+/* Boton frente */
+
+.botones_movimiento .frente{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: frente;
+
+
+}
+
+
+.botones_movimiento .frente .boton_frente{
+
+    border-radius: 10px;
+    border: 2px solid;
+    border-color:#003d63;
+    padding: 4px;
+    padding-left: 55px;
+    padding-right: 55px;
+    
+}
+
+
+.botones_movimiento .frente .boton_frente:hover{
+    background-color: #abd9f5;
+    cursor: pointer;
+}
+
+
+
+
+/* Boton atras */
+
+.botones_movimiento .atras{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: atras;
+
+}
+
+
+.botones_movimiento .atras .boton_atras{
+
+    border-radius: 10px;
+    border: 2px solid;
+    border-color:#003d63;
+    padding: 4px;
+    padding-left: 55px;
+    padding-right: 55px;
+    
+}
+
+
+.botones_movimiento .atras .boton_atras:hover{
+
+    background-color: #abd9f5;
+    cursor: pointer;
+    
+}
+
+
+/* Boton izquierda*/
+
+.botones_movimiento .izquierda{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: izquierda;
+       
+}
+
+
+.botones_movimiento .izquierda .boton_izquierda{
+
+    border-radius: 10px;
+    border: 2px solid;
+    border-color:#003d63;
+    padding: 4px;
+    padding-left: 55px;
+    padding-right: 55px;
+}
+
+
+.botones_movimiento .izquierda .boton_izquierda:hover{
+
+    background-color: #abd9f5;
+    cursor: pointer;
+}
+
+
+/* Boton derecha*/
+
+.botones_movimiento .derecha{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: derecha;
+
+
+}
+
+.botones_movimiento .derecha .boton_derecha{
+
+    border-radius: 10px;
+    border: 2px solid;
+    border-color:#003d63;
+    padding: 4px;
+    padding-left: 55px;
+    padding-right: 55px;
+    
+}
+
+
+.botones_movimiento .derecha .boton_derecha:hover{
+
+    background-color: #abd9f5;
+    cursor: pointer;
+}
+
+/* Velocidad*/
+
+.velocidad{
+
+    display: flex;
+    border: 2px solid;
+    border-color:#003d63;
+    border-radius: 8px;
+    grid-area: velocidad;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    color: #003d63;
+}
+
+.velocidad .slider{
+
+    -webkit-appearance: none;
+    width: 80%;
+    height: 5px;
+    outline: none;
+    border-radius: 3px;
+    background-color: #003d63;
+
+}
+
+
+.velocidad .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    cursor:pointer;
+    border-radius: 50%;
+    background-color: #03b5fc;
+   
+}
+
+.velocidad .valor_velocidad{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    box-sizing: border-box;
+    background: #003d63;
+    border-radius: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 2px;
+}
+
+
+
+/* Brazo */
+
+.barra_brazo{
+
+    display: flex;
+    margin: 1px;
+    background: #003d63;
+    grid-area: barra_brazo;
+    border: 2px solid;
+    border-color:#003d63;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.botones_brazo{
+
+    grid-area: botones_brazo;
+    border: 2px solid;
+    border-color:#003d63;
+    border-radius: 10px;
+    display: grid;
+    grid-gap: 2px;
+    background-color: #003d63;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+     "t_b t_ab t_m t_p"
+     "b_up ab_up m_d p_a"
+     "b_d ab_d m_i p_c";
+}
+
+/* Brazo principal */
+
+.botones_brazo .t_b{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: t_b;
+    color: white;
+    background-color: #003d63;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+
+}
+
+/* Brazo principal - Arriba*/
+
+.botones_brazo .b_up{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    grid-area: b_up;
+    padding: 2px;
+    background-color: white ;
+
+}
+
+.botones_brazo .b_up .boton_up{
+
+    border-radius: 10px;
+    border: 2px solid;
+    border-color:#003d63;
+    padding: 2px;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+}
+
+
+.botones_brazo .b_up .boton_up:hover{
+
+    background-color: #abd9f5;
+    cursor: pointer;
+}
+
+/* Brazo principal - Abajo*/
+
+.botones_brazo .b_d{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    grid-area: b_d;
+    padding: 2px;
+    background-color: white ;
+    border-bottom-left-radius: 10px;
+
+}
+
+.botones_brazo .b_d .boton_d{
+
+    border-radius: 10px;
+    border: 2px solid;
+    border-color:#003d63;
+    padding: 2px;
+    padding-left: 40px;
+    padding-right: 40px;
+ 
+    
+}
+
+
+.botones_brazo .b_d .boton_d:hover{
+
+    background-color: #abd9f5;
+    cursor: pointer;
+}
+
+
+/* Antebrazo */
+
+.botones_brazo .t_ab{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: t_ab;
+    color: white;
+    background-color: #003d63;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+
+}
+
+/* Antebrazo - Arriba*/
+
+.botones_brazo .ab_up{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    grid-area: ab_up;
+    padding: 2px;
+    background-color: white ;
+
+}
+
+.botones_brazo .ab_up .boton_upab{
+
+    border-radius: 10px;
+    border: 2px solid;
+    border-color:#003d63;
+    padding: 2px;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+}
+
+
+.botones_brazo .ab_up .boton_upab:hover{
+
+    background-color: #abd9f5;
+    cursor: pointer;
+}
+
+/* Antebrazo - Abajo*/
+
+.botones_brazo .ab_d{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: ab_d;
+    padding: 2px;
+    background-color: white ;
+
+}
+
+.botones_brazo .ab_d .boton_dab{
+
+    border-radius: 10px;
+    border: 2px solid;
+    border-color:#003d63;
+    padding: 2px;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+}
+
+
+.botones_brazo .ab_d .boton_dab:hover{
+
+    background-color: #abd9f5;
+    cursor: pointer;
+}
+
+
+/* Mano */
+
+.botones_brazo .t_m{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: t_m;
+    color: white;
+    background-color: #003d63;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+
+}
+
+/* Mano - Derecha*/
+
+.botones_brazo .m_d{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    grid-area: m_d;
+    padding: 2px;
+    background-color: white ;
+
+}
+
+.botones_brazo .m_d .boton_d{
+
+    border-radius: 10px;
+    border: 2px solid;
+    border-color:#003d63;
+    padding: 2px;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+}
+
+
+.botones_brazo .m_d .boton_d:hover{
+
+    background-color: #abd9f5;
+    cursor: pointer;
+}
+
+/* Mano - Izquierda*/
+
+.botones_brazo .m_i{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: m_i;
+    padding: 2px;
+    background-color: white ;
+
+}
+
+.botones_brazo .m_i .boton_i{
+
+    border-radius: 10px;
+    border: 2px solid;
+    border-color:#003d63;
+    padding: 2px;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+}
+
+
+.botones_brazo .m_i .boton_i:hover{
+
+    background-color: #abd9f5;
+    cursor: pointer;
+}
+
+/* Pinza */
+
+.botones_brazo .t_p{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: t_p;
+    color: white;
+    background-color: #003d63;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+
+}
+
+/* Pinza - Abierta*/
+
+.botones_brazo .p_a{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    grid-area: p_a;
+    padding: 2px;
+    background-color: white ;
+
+}
+
+.botones_brazo .p_a .boton_pa{
+
+    border-radius: 10px;
+    border: 2px solid;
+    border-color:#003d63;
+    padding: 2px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    color: #003d63;
+    text-decoration: none;
+    
+}
+
+
+.botones_brazo .p_a .boton_pa:hover{
+
+    background-color: #abd9f5;
+    cursor: pointer;
+}
+
+/* Pinza - Cerrada*/
+
+.botones_brazo .p_c{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: p_c;
+    padding: 2px;
+    background-color: white ;
+    border-bottom-right-radius: 10px;
+
+}
+
+.botones_brazo .p_c .boton_pc{
+
+    border-radius: 10px;
+    border: 2px solid;
+    border-color:#003d63;
+    padding: 2px;
+    padding-left: 26px;
+    padding-right: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    color: #003d63;
+    text-decoration: none;
+    
+}
+
+
+.botones_brazo .p_c .boton_pc:hover{
+
+    background-color: #abd9f5;
+    cursor: pointer;
+}
+
+/* Extras - Camara - Sensores - Luces */
+
+.barra_sensores{
+
+    grid-area: barra_sensores;
+    display: flex;
+    margin: 1px;
+    background: #003d63;
+    border: 2px solid;
+    border-color:#003d63;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.botones_sensores{
+
+    grid-area: botones_sensores;
+    border: 2px solid;
+    border-color:#003d63;
+    border-radius: 10px;
+    display: grid;
+    grid-gap: 2px;
+    background-color: #003d63;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+     "t_c t_l"
+     "b_cup b_lp"
+     "b_cd b_lc";
+}
+
+/* Camara-US */
+
+.botones_sensores .t_c{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: t_c;
+    color: white;
+    background-color: #003d63;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+
+}
+
+/* Camara - Arriba*/
+
+.botones_sensores .b_cup{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: b_cup;
+    padding: 2px;
+    background-color: white ;
+
+}
+
+.botones_sensores .b_cup .boton_cup{
+
+    border-radius: 10px;
+    border: 2px solid;
+    border-color:#003d63;
+    padding: 2px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    color: #003d63;
+    text-decoration: none;
+    
+}
+
+
+.botones_sensores .b_cup .boton_cup:hover{
+
+    background-color: #abd9f5;
+    cursor: pointer;
+}
+
+/* Camara - Abajo*/
+
+
+.botones_sensores .b_cd{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: b_cd;
+    padding: 2px;
+    background-color: white ;
+    border-bottom-left-radius: 10px;
+
+}
+
+.botones_sensores .b_cd .boton_cd{
+
+    border-radius: 10px;
+    border: 2px solid;
+    border-color:#003d63;
+    padding: 2px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    color: #003d63;
+    text-decoration: none;
+    
+}
+
+
+.botones_sensores .b_cd .boton_cd:hover{
+
+    background-color: #abd9f5;
+    cursor: pointer;
+}
+
+/* Luces - Prender*/
+
+
+.botones_sensores .t_l{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: t_l;
+    color: white;
+    background-color: #003d63;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+
+}
+
+
+/* Boton colores */
+
+
+.botones_sensores .b_lp{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: b_lp;
+    padding: 2px;
+    background-color: white ;
+
+}
+
+.botones_sensores .b_lp .boton_lp{
+
+    border-radius: 10px;
+    border: 2px solid;
+    border-color:#003d63;
+    padding: 2px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    color: #003d63;
+    text-decoration: none;
+    
+}
+
+
+.botones_sensores .b_lp .boton_lp:hover{
+
+    cursor: pointer;
+    
+}
+
+/* Boton colores */
+
+
+.botones_sensores .b_lc{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: b_lc;
+    padding: 2px;
+    background-color: white ;
+    border-bottom-right-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    color: #003d63;
+    
+
+}
+
+.botones_sensores .b_lc .boton_lc{
+
+    border-radius: 10px;
+    border: 2px solid;
+    border-color:#003d63;
+    padding: 2px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 20px;
+    background-color: white;
+  
+    
+}
+
+
+.botones_sensores .b_lc .boton_lc:hover{
+
+    cursor: pointer;
+    
+}
+
+
+
+
+/*Footer*/
+
+footer {
+    width: auto;
+    height: 160px;
+    background-color:#0390fc ;
+
+}
+
+footer > .marcas {
+    height: 50px;
+    background-color:#abd9f5;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+
+footer > .marcas > .adeept {
+    width: 50px;
+
+}
+
+footer > .marcas > .spring {
+    margin-left: 120px;
+    margin-top: 2px;
+    width: 140px;
+
+}
+
+footer > .marcas > .pi {
+    justify-content:right;
+    width: 90px;
+
+}
+
+footer >.logo_footer{
+
+    display: flex;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 80px);
+}
+
+footer > .logo_footer > img {
+    width: 70px;
+}
+
+footer > .logo_footer > .titulo_footer{
+
+    margin-left: 10px;
+    font-family: "Helvetica";
+}
+
+footer > .autor {
+
+    display: flex;
+    height: 40px;
+    background-color:#003d63;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+footer > .autor > .dev_footer{
+    margin-left: 35px;
+    font-family: "Helvetica";
+    font-weight: 700;
+    color: seashell;
+ 
+}
+
+footer > .autor > .autor_footer{
+
+    margin-left: 4px;
+    font-family: "Helvetica";
+    font-weight: 400;
+    color: seashell;
+ 
+}
+
+
+
+
+/*Media Queries*/
+
+
+/*Tablet*/
+
+@media (max-width: 1024px){
+
+
+}
+
+/*Smarthphone*/
+
+@media (max-width: 480px){
+
+
+    .contenido{
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 2.5fr 0.2fr 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr ;
+        height: 110vh;
+        grid-template-areas: 
+        "barra_video "
+        "video "
+        "barra_movimiento"
+        "botones_movimiento"
+        "velocidad"
+        "barra_brazo"
+        "botones_brazo"
+        "barra_sensores"
+        "botones_sensores"
+        "barra_extras"
+        "botones_extras";
+   
+    }
+
+/* Botones Movimiento */
+
+    .botones_movimiento{
+        height: 80px;
+    }
+    
+    .botones_movimiento .frente .boton_frente{
+
+        padding: 2px;
+        padding-left: 25px;
+        padding-right: 25px;
+        
+    }
+
+    .botones_movimiento .atras .boton_atras{
+        
+        padding: 2px;
+        padding-left: 25px;
+        padding-right: 25px;
+        
+    }
+
+
+    .botones_movimiento .izquierda .boton_izquierda{
+
+        padding: 2px;
+        padding-left: 25px;
+        padding-right: 25px;
+        
+    }
+
+    .botones_movimiento .derecha .boton_derecha{
+
+        padding: 2px;
+        padding-left: 25px;
+        padding-right: 25px;
+        
+    }
+
+/* Brazo principal */
+
+
+/* Brazo principal - Arriba*/
+
+
+.botones_brazo .b_up .boton_up{
+
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+
+
+/* Brazo principal - Abajo*/
+
+
+.botones_brazo .b_d .boton_d{
+
+    padding-left: 15px;
+    padding-right: 15px;
+ 
+}
+
+
+
+/* Antebrazo */
+
+/* Antebrazo - Arriba*/
+
+
+.botones_brazo .ab_up .boton_upab{
+
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+
+
+/* Antebrazo - Abajo*/
+
+
+.botones_brazo .ab_d .boton_dab{
+
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+
+
+/* Mano */
+
+/* Mano - Derecha*/
+
+.botones_brazo .m_d .boton_d{
+
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+
+/* Mano - Izquierda*/
+
+.botones_brazo .m_i .boton_i{
+
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+
+
+/* Pinza */
+
+/* Pinza - Abierta*/
+
+
+.botones_brazo .p_a .boton_pa{
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+
+/* Pinza - Cerrada*/
+
+
+.botones_brazo .p_c .boton_pc{
+
+    padding-left: 16px;
+    padding-right: 16px;
+    
+}
+
+/* Footer */
+
+    footer {
+        width: auto;
+        height: 160px;
+        background-color:#0390fc ;
+    
+    }
+    
+    footer > .marcas {
+        height: 50px;
+        background-color:#abd9f5;
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+    }
+    
+    
+    footer > .marcas > .adeept {
+        width: 50px;
+    
+    }
+    
+    footer > .marcas > .spring {
+        margin-left: 10px;
+        margin-top: 2px;
+        width: 140px;
+    
+    }
+    
+    footer > .marcas > .pi {
+        justify-content:right;
+        width: 90px;
+    
+    }
+
+}

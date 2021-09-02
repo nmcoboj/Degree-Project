@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Control</title>
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <script src="JS/configuraciones.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+        </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="contenedor_logo">
+
+            <img src="IMG/remote-control.png" alt="logo" class="logo">
+            <h2 class="titulo">Aplicación de Control</h2>
+        </div>
+
+    </header>
+
+    <div class="contenido">
+        <div class="barra_video">Video</div>
+        <div class="video">
+            <img class="imagen" src="https://75aae98dce72.ngrok.io/video_feed" width="500" height="470">
+        </div>
+        <div class="barra_movimiento">Controles de Movimiento</div>
+        <div class="botones_movimiento">
+
+            <div class="vacio"> </div>
+            <div class="vacio1"> </div>
+            <!-- Boton adelante. -->
+            <div class="frente">
+                <a class=boton_frente id=boton_adelante onmousedown="mover_adelante()" onmouseup="parar_adelante()">
+                    <input type="image" src="IMG/iconos/up-arrow.png">
+                </a>
+            </div>
+            <!-- Boton atras. -->
+            <div class="atras">
+                <a class=boton_atras id=boton_atras onmousedown="mover_atras()" onmouseup="parar_atras()">
+                    <input type="image" src="IMG/iconos/down-arrow.png">
+                </a>
+            </div>
+            <!-- Boton izquierda. -->
+            <div class="izquierda">
+                <a class=boton_izquierda id=boton_izquierda onmousedown="mover_izquierda()"
+                    onmouseup="parar_izquierda()">
+                    <input type="image" src="IMG/iconos/left-arrow.png">
+                </a>
+            </div>
+            <!-- Boton derecha. -->
+            <div class="derecha">
+                <a class=boton_derecha id=boton_derecha onmousedown="mover_derecha()" onmouseup="parar_derecha()">
+                    <input type="image" src="IMG/iconos/right-arrow.png">
+                </a>
+            </div>
+
+        </div>
+        <!-- Slider. -->
+        <div class="velocidad"> Velocidad:
+            <input type="range" class="slider" id="slider" value="0" min="0" max="100" step="50"
+                onmousemove="rangoSlider(this.value)" onchange="rangoSlider(this.value)">
+            <span id="valor_velocidad" class="valor_velocidad">0</span>
+        </div>
+        <div class="barra_brazo">Controles del Brazo Mecánico</div>
+        <!-- Botones brazo -->
+        <div class="botones_brazo">
+            <div class="t_b"> Brazo </div>
+            <!-- Boton brazo arriba. -->
+            <div class="b_up">
+                <a class=boton_up id=boton_brazoarriba onmousedown="mover_brazoarriba()"
+                    onmouseup="parar_brazoarriba()">
+                    <input type="image" src="IMG/iconos/up-arrow.png">
+                </a>
+            </div>
+            <!-- Boton brazo abajo. -->
+            <div class="b_d">
+                <a class=boton_d id=boton_brazoabajo onmousedown="mover_brazoabajo()" onmouseup="parar_brazoabajo()">
+                    <input type="image" src="IMG/iconos/down-arrow.png">
+                </a>
+            </div>
+            <!-- Boton antebrazo arriba. -->
+            <div class="t_ab"> Antebrazo </div>
+            <div class="ab_up">
+                <a class=boton_upab id=boton_antebrazoarriba onmousedown="mover_antebrazoarriba()"
+                    onmouseup="parar_antebrazoarriba()">
+                    <input type="image" src="IMG/iconos/up-arrow.png">
+                </a>
+            </div>
+            <!-- Boton antebrazo abajo. -->
+            <div class="ab_d">
+                <a class=boton_dab id=boton_antebrazoabajo onmousedown="mover_antebrazoabajo()"
+                    onmouseup="parar_antebrazoabajo()">
+                    <input type="image" src="IMG/iconos/down-arrow.png">
+                </a>
+            </div>
+            <!-- Boton mano derecha. -->
+            <div class="t_m"> Mano </div>
+            <div class="m_d">
+                <a class=boton_d id=boton_manoderecha onmousedown="mover_manoderecha()" onmouseup="parar_manoderecha()">
+                    <input type="image" src="IMG/iconos/right-arrow.png">
+                </a>
+            </div>
+            <!-- Boton mano izquierda. -->
+            <div class="m_i">
+                <a class=boton_i id=boton_manoizquierda onmousedown="mover_manoizquierda()"
+                    onmouseup="parar_manoizquierda()">
+                    <input type="image" src="IMG/iconos/left-arrow.png">
+                </a>
+            </div>
+            <!-- Botones pinza -->
+            <div class="t_p"> Pinza </div>
+            <!-- Boton abrir Pinza. -->
+            <div class="p_a">
+                <a class=boton_pa id=boton_abrirpinza onmousedown="mover_abrirpinza()" onmouseup="parar_abrirpinza()">
+                    Abrir
+                </a>
+            </div>
+            <div class="p_c">
+                <!-- Boton cerrar Pinza. -->
+                <a class=boton_pc id=boton_cerrarpinza onmousedown="mover_cerrarpinza()"
+                    onmouseup="parar_cerrarpinza()">
+                    Cerrar
+                </a>
+            </div>
+
+        </div>
+        <div class="barra_sensores">Controles Extra</div>
+        <div class="botones_sensores">
+            <div class="t_c"> Cámara</div>
+            <!-- Boton camara arriba. -->
+            <div class="b_cup">
+                <a class=boton_cup id=boton_camaraarriba onmousedown="mover_camaraarriba()"
+                    onmouseup="parar_camaraarriba()">
+                    <input type="image" src="IMG/iconos/up-arrow.png">
+                </a>
+            </div>
+            <!-- Boton camara abajo. -->
+            <div class="b_cd">
+                <a class="boton_cd" id=boton_camaraabajo onmousedown="mover_camaraabajo()"
+                    onmouseup="parar_camaraabajo()">
+                    <input type="image" src="IMG/iconos/down-arrow.png">
+                </a>
+            </div>
+
+            <div class="t_l"> Luces </div>
+            <div class="b_lp">
+                <a class="boton_lp" id="boton_lp" onclick="toggle()">
+                    <span class="Apagada">Apagadas</span>
+                </a>
+            </div>
+            <div class="b_lc">
+                Color:
+                <a class="boton_lc" id="boton_lc" onclick="colorL()">
+
+                </a>
+            </div>
+
+
+        </div>
+
+        <!--  <video
+        id="my-video"
+        class="video-js"
+        controls
+        preload="auto"
+        width="640"
+        height="264"
+        poster="MY_VIDEO_POSTER.jpg"
+        data-setup="{}"
+      >
+        <source src="MY_VIDEO.mp4" type="video/mp4" />
+        <source src="MY_VIDEO.webm" type="video/webm" />
+        <p class="vjs-no-js">
+          To view this video please enable JavaScript, and consider upgrading to a
+          web browser that
+          <a href="https://videojs.com/html5-video-support/" target="_blank"
+            >supports HTML5 video</a
+          >
+        </p>
+      </video> -->
+
+        <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+
+    </div>
+
+    <footer>
+        <div class="marcas">
+            <img class="adeept " src="IMG/footer/adeept.png" alt="adeept">
+            <img class="spring" src="IMG/footer/spring.png" alt="spring">
+            <img class="pi" src="IMG/footer/pi.png" alt="pi">
+        </div>
+
+        <div class="logo_footer">
+            <img src="IMG/remote-control.png" alt="logo" class="logo">
+            <h3 class="titulo_footer">Aplicación de Control</h3>
+        </div>
+
+        <div class="autor">
+            <h4 class="dev_footer">Desarrollada por: </h4>
+            <h4 class="autor_footer">Nikolás Cobo J.</h4>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
